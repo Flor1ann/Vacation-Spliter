@@ -5,20 +5,36 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <h1>User List</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <tr th:each="user : ${users}">
-            <td th:text="${user.id}"></td>
-            <td th:text="${user.name}"></td>
-            <td th:text="${user.email}"></td>
-        </tr>
-    </table>
-    <br>
-    <a href="/new">Add New User</a>
+    <div class="row">
+        <div class="col-12">
+            <h1>Home</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h3>Gruppen</h3>
+            <table class="center" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mitglieder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="user : ${users}">
+                        <td th:text="${user.name}"></td>
+                        <td th:text="${user.name}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="/new">Neue Gruppe erstellen</a>
+        </div>
+    </div>
 </body>
 </html>

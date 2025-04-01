@@ -19,6 +19,7 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
+    text-align: center;
 }
 
 .row::after {
@@ -33,6 +34,11 @@ html {
 
 .firstRow {
     margin-top: 110px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
